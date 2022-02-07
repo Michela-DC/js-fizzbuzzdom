@@ -17,7 +17,7 @@ for (let i = 1; i <= 100; i++) {
     // console.log(i);
 
     const DIV = document.createElement('div');
-    // creo un div nell'html usando document.createElement('div'), tra parentesi ci va il nome del tag che voglio creare, e nel js lo salvo dentro la const FIZZ    
+    // creo un div nell'html usando document.createElement('div'), tra parentesi ci va il nome del tag che voglio creare, e nel js lo salvo dentro la const DIV    
     //essendo dentro al for loop il div verrà creato ogni volta che ricomincia il ciclo
     CONTAINER.append(DIV);
     // Vado a mettere il div creato dentro il container
@@ -25,9 +25,9 @@ for (let i = 1; i <= 100; i++) {
     if ((i % 3 === 0) && (i % 5 === 0)){
         console.log("FizzBuzz");
         DIV.append("FizzBuzz");
-        // dentro al div scrivo Fizz tramite il metodo .append
+        // dentro al div scrivo FizzBuzz tramite il metodo .append
         DIV.classList.add("fizzBuzz-background");
-        // assegno la classe fizz usando .classList.add()
+        // assegno la classe fizzBuzz-background usando .classList.add()
 
     } else if (i % 3 === 0){
         console.log("Fizz");
