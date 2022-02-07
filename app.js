@@ -22,28 +22,52 @@ for (let i = 1; i <= 100; i++) {
     CONTAINER.append(DIV);
     // Vado a mettere il div creato dentro il container
     
-    if ((i % 3 === 0) && (i % 5 !== 0)){
-        console.log("Fizz");
-        DIV.append("Fizz");
-        // dentro al div scrivo Fizz tramite il metodo .append
-        DIV.classList.add("fizz");
-        // assegno la classe fizz usando .classList.add()
-
-    } else if ((i % 5 === 0) && (i % 3 !== 0)){
-        console.log("Buzz");
-        DIV.append("Buzz");
-        DIV.classList.add("buzz");
-
-    } else if ((i % 3 === 0) && (i % 5 === 0)) {
+    if ((i % 3 === 0) && (i % 5 === 0)){
         console.log("FizzBuzz");
         DIV.append("FizzBuzz");
-        DIV.classList.add("fizz-buzz");
+        // dentro al div scrivo Fizz tramite il metodo .append
+        DIV.classList.add("fizzBuzz-background");
+        // assegno la classe fizz usando .classList.add()
+
+    } else if (i % 3 === 0){
+        console.log("Fizz");
+        DIV.append("Fizz");
+        DIV.classList.add("fizz-background");
+
+    } else if (i % 5 === 0) {
+        console.log("Buzz");
+        DIV.append("Buzz");
+        DIV.classList.add("buzz-background");
 
     } else{
         console.log(i);
         DIV.append(i);
-        DIV.classList.add("number");
-    } 
+        DIV.classList.add("number-background");
+    }   
 }
 
-        // Vado a scrivere dentro il fizz tramite il metodo .append
+/*    
+     Altro modo per mettere i div dentro i container:
+    const DIV_2 = `<div class = number-background >${}</div>`;
+    --> creo il div a cui do già la classe e dentro a ${} ci metto la variabile che voglio inserire nel div
+    CONTAINER.innerHTML += DIV;
+    --> concateno il DIV al container così il div risulterà dentro al container
+
+
+    Modo con if più lunghi partendo da  (i % 3 === 0):
+
+    if ((i % 3 === 0) && (i % 5 !== 0)){
+        per stampare fizz
+        --> devo mettere entrambe le condizioni altrimenti poi non mi asegna la condizione dove deve essere sia multiplo di 3 che di 5 perché si fermerebbe solo alla condizione o multiplo di 3 o multiplo di 5
+
+    } else if ((i % 5 === 0) && (i % 3 !== 0)){
+        per stampare buzz
+        
+    } else if ((i % 3 === 0) && (i % 5 === 0)) {
+        per stampare fizzbuzz
+
+    } else{
+        stampa il numero
+    } 
+
+*/
