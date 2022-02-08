@@ -21,28 +21,29 @@ for (let i = 1; i <= 100; i++) {
     //essendo dentro al for loop il div verrà creato ogni volta che ricomincia il ciclo
     CONTAINER.append(DIV);
     // Vado a mettere il div creato dentro il container
+    DIV.classList.add("box");
     
     if ((i % 3 === 0) && (i % 5 === 0)){
         console.log("FizzBuzz");
         DIV.append("FizzBuzz");
         // dentro al div scrivo FizzBuzz tramite il metodo .append
-        DIV.classList.add("fizzBuzz-background");
+        DIV.classList.add("fizzBuzz-bg");
         // assegno la classe fizzBuzz-background usando .classList.add()
 
     } else if (i % 3 === 0){
         console.log("Fizz");
         DIV.append("Fizz");
-        DIV.classList.add("fizz-background");
+        DIV.classList.add("fizz-bg");
 
     } else if (i % 5 === 0) {
         console.log("Buzz");
         DIV.append("Buzz");
-        DIV.classList.add("buzz-background");
+        DIV.classList.add("buzz-bg");
 
     } else{
         console.log(i);
         DIV.append(i);
-        DIV.classList.add("number-background");
+        DIV.classList.add("number-bg");
     }   
 }
 

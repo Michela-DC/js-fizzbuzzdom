@@ -23,7 +23,7 @@ h1{
     gap: 3%;
 }
 
-.container div{
+.box{
     width: calc(82% / 7);
     height: 100px;
     display: flex;
@@ -32,18 +32,18 @@ h1{
     margin-bottom: 2%;
 }
 
-.number-background{
+.number-bg{
     background-color: #1489B2;
 }
 
-.fizz-background{
+.fizz-bg{
     background-color: #0BD6A1;
 }
 
-.buzz-background{
+.buzz-bg{
     background-color: #FFD166;
 }
 
-.fizzBuzz-background{
+.fizzBuzz-bg{
     background-color: #F0466F;
 }
